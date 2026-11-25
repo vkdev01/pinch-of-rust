@@ -2,10 +2,17 @@
 
 **Read the course online: <https://vkdev01.github.io/pinch-of-rust/>**
 
-A single self-contained page (searchable, dark/light theme, syntax highlighting)
-is generated from these markdown files. `index.html` is that page — open it
-locally or use the link above. Everything below is the same content in plain
-markdown, one file per lesson.
+The site in `site/` is a Next.js App Router app (Tailwind CSS v4 + HeroUI v3)
+that renders these markdown files at build time. Run it locally with
+`cd site && npm install && npm run dev`; `npm run build` emits a static site
+that GitHub Actions deploys to Pages.
+
+Everything below is the same content in plain markdown, one file per lesson.
+Alongside the six modules there are three more collections:
+
+- `projects/` — six buildable projects with milestones, crates and demo checklists
+- `use-cases/` — where Rust runs in production, domain by domain
+- `examples/` — task-shaped recipes: problem, code, trap
 
 ---
 

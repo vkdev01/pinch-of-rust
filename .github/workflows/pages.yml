@@ -15,33 +15,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: site/package-lock.json
 
-      - name: Stage the site
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp -r 01-getting-started 02-language 03-ecosystem 04-real-world 05-capstone 06-reference _site/
-          cp README.md LICENSE _site/
-          touch _site/.nojekyll
+      - name: Install
+        working-directory: site
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: site
+        run: npm run typecheck
+
+      - name: Build static site
+        working-directory: site
+        env:
+          GITHUB_PAGES: "true"
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: site/out
 
-      # deploy-pages lists artifacts immediately after upload and can see zero
-      # for a few seconds; a short pause avoids that race.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # deploy-pages lists artifacts immediately after upload and can briefly see
+      # zero of them; a short pause avoids that race.
       - name: Let artifact registration settle
         run: sleep 10
 
-      - id: deploy
+      - id: deployment
         uses: actions/deploy-pages@v4
