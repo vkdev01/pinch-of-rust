@@ -25,6 +25,9 @@ const MODULES = [
   { slug: "04-real-world", index: "04", title: "Real-world use cases", blurb: "CLIs, APIs, databases, queues, WASM, embedded, games, data." },
   { slug: "05-capstone", index: "05", title: "Capstone project", blurb: "A complete SaaS service: Rust API, Postgres, worker, dashboard." },
   { slug: "06-reference", index: "06", title: "Reference", blurb: "Cheat sheet, error decoder, interview bank, 30-day plan." },
+  { slug: "07-dsa", index: "07", title: "Data structures & algorithms", blurb: "Complexity you can measure, cache-aware layouts, arenas, heaps, graphs, sorting." },
+  { slug: "08-concurrency", index: "08", title: "Concurrency in practice", blurb: "Threads and pools, every sync primitive, atomics and ordering, lock-free SPSC, parallel patterns." },
+  { slug: "09-design", index: "09", title: "Design & architecture", blurb: "API design, crate boundaries, testability, concurrency architecture, system design cases." },
 ];
 
 const COLLECTIONS = [

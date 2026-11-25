@@ -199,7 +199,7 @@ export default function HomePage() {
             <div>
               <span className="label">the syllabus</span>
               <h2 className="mt-2 text-[22px] font-semibold tracking-[-0.02em]">
-                Six modules, {stats.lessons} lessons
+                {stats.modules} modules, {stats.lessons} lessons
               </h2>
             </div>
             <Link

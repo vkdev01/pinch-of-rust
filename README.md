@@ -10,8 +10,8 @@ that GitHub Actions deploys to Pages.
 Everything below is the same content in plain markdown, one file per lesson.
 Alongside the six modules there are three more collections:
 
-- `projects/` — six buildable projects with milestones, crates and demo checklists
-- `use-cases/` — where Rust runs in production, domain by domain
+- `projects/` — eight buildable projects with milestones, crates and demo checklists
+- `use-cases/` — where Rust runs in production: cloud, devtools, data, fintech, embedded, web, HFT, desktop
 - `examples/` — task-shaped recipes: problem, code, trap
 
 ---
@@ -103,6 +103,31 @@ dashboard. This is the "project repo".
 3. [Interview questions with answers](06-reference/03-interview.md)
 4. [A 30-day study plan](06-reference/04-30-day-plan.md)
 5. [Resources worth your time](06-reference/05-resources.md)
+
+### Module 07 — Data structures & algorithms
+1. [Complexity, measured](07-dsa/01-complexity-and-measurement.md)
+2. [Arrays, slices and the cache](07-dsa/02-arrays-and-cache.md)
+3. [Linked structures, and why you rarely want them](07-dsa/03-linked-structures.md)
+4. [Stacks, queues and ring buffers](07-dsa/04-stacks-queues.md)
+5. [Hashing and maps](07-dsa/05-hashing.md)
+6. [Trees and ordered maps](07-dsa/06-trees.md)
+7. [Heaps and priority queues](07-dsa/07-heaps.md)
+8. [Graphs](07-dsa/08-graphs.md)
+9. [Sorting and selection](07-dsa/09-sorting.md)
+
+### Module 08 — Concurrency in practice
+1. [Threads and pools](08-concurrency/01-threads-and-pools.md)
+2. [Synchronisation primitives](08-concurrency/02-synchronisation.md)
+3. [Atomics and memory ordering](08-concurrency/03-atomics.md)
+4. [Lock-free structures](08-concurrency/04-lock-free.md)
+5. [Parallel data patterns](08-concurrency/05-parallel-patterns.md)
+
+### Module 09 — Design & architecture
+1. [Designing a Rust API](09-design/01-api-design.md)
+2. [Architecture and boundaries](09-design/02-architecture.md)
+3. [Designing for testability](09-design/03-testability.md)
+4. [Concurrency architecture](09-design/04-concurrency-architecture.md)
+5. [System design, in Rust](09-design/05-system-design.md)
 
 ---
 
