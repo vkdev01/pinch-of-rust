@@ -38,5 +38,10 @@ jobs:
         with:
           path: _site
 
+      # deploy-pages lists artifacts immediately after upload and can see zero
+      # for a few seconds; a short pause avoids that race.
+      - name: Let artifact registration settle
+        run: sleep 10
+
       - id: deploy
         uses: actions/deploy-pages@v4
