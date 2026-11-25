@@ -74,6 +74,8 @@ impl<T> Ring<T> {
 The `% cap` is a modulo per operation. With a power-of-two capacity, `& (cap - 1)`
 is a single instruction — worth doing in a hot loop.
 
+[[fig:canvas-ring]]
+
 ## The queue that is a channel
 
 A bounded MPSC channel *is* a queue with backpressure. Prefer it to hand-rolling:

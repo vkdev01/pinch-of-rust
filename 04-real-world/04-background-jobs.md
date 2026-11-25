@@ -155,6 +155,8 @@ sqlx::query("INSERT INTO jobs (kind, payload) VALUES ('send_welcome', $1)")
 tx.commit().await?;
 ```
 
+[[fig:queue-lifecycle]]
+
 ### Claim
 
 ```rust
@@ -272,6 +274,8 @@ this, one crashed pod silently stops processing a subset of your jobs.
 > **Gotcha:** the reaper can resurrect a job that is genuinely still running
 > (a long task, not a dead worker). Either set `stale_after` above your longest
 > job, or have handlers be **idempotent**. Idempotency is the real answer.
+
+[[fig:queue-depth]]
 
 ## Idempotency
 

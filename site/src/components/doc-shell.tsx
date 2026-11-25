@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Chip } from "@heroui/react";
 
 import { ArrowLeft, ArrowRight } from "@/components/icons";
+import { ProseWithFigures } from "@/components/figure";
 import { TocRail } from "@/components/toc-rail";
 import { getDocHtml, getModules, lessonsOf, neighbours, type Doc } from "@/lib/content";
 import { pad, readingTime } from "@/lib/utils";
@@ -99,7 +100,9 @@ export function DocShell({ doc }: Props) {
           <div className="mt-6 h-px w-full bg-gradient-to-r from-accent/60 via-border to-transparent" />
         </header>
 
-        <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="prose">
+          <ProseWithFigures html={html} />
+        </div>
 
         <nav className="mt-12 grid gap-3 border-t border-border/70 pt-6 sm:grid-cols-2" aria-label="Pagination">
           {prev ? (

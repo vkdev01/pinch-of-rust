@@ -472,6 +472,15 @@
     white-space: nowrap;
   }
 
+  /* figures injected into prose keep their own spacing */
+  .prose figure p,
+  .prose figure figcaption {
+    margin: 0;
+  }
+  .prose figure a {
+    text-decoration: none;
+  }
+
   /* tables */
   .prose table {
     width: 100%;

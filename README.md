@@ -176,3 +176,6 @@ library ecosystem you need exists only in Python.
 - Version numbers are the ones stable at the time of writing. Crate APIs move;
   the compiler and `cargo doc` are the final authority.
 - The capstone's code lives in `capstone/` alongside this file.
+- `[[fig:key]]` on its own line marks where a chart, flowchart or interactive
+  canvas belongs. The site replaces the marker with the component registered in
+  `site/src/components/figure.tsx`; the raw markdown stays readable.

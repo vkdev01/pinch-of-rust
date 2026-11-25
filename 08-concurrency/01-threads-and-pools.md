@@ -32,6 +32,8 @@ fn cpu_bound_workers() -> usize {
 Oversubscription is not free: 64 CPU threads on 8 cores spends more time in context
 switches and cache thrash than doing work.
 
+[[fig:thread-scaling]]
+
 ## Scoped threads: borrow instead of `Arc`
 
 ```rust

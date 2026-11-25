@@ -71,6 +71,8 @@ v.par_sort_unstable();          // ~3-4x on 8 cores for large N
 
 Parallel sort wins above ~100k elements. Below that, thread overhead dominates.
 
+[[fig:canvas-sort]]
+
 ## Selection: the k-th element without sorting
 
 ```rust

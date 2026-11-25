@@ -105,6 +105,8 @@ fn make() -> String {
 let s = make();      // we own it now
 ```
 
+[[fig:ownership-flow]]
+
 ## Borrowing
 
 Moving everything in and out of functions would be unbearable. Instead, **borrow**:
@@ -158,6 +160,8 @@ It eliminates data races *at compile time*. A data race requires two threads
 accessing the same memory, at least one writing, without synchronisation. If a
 `&mut T` cannot coexist with any other reference, that situation cannot be
 expressed. `Send`/`Sync` (module 02.10) extend the same argument across threads.
+
+[[fig:canvas-borrow]]
 
 ### Non-lexical lifetimes (NLL)
 

@@ -36,6 +36,8 @@ deterministically.
 | 5 | Fast | under 50 ns per add/cancel on a pinned core |
 | 6 | Deterministic | replaying a tape twice produces byte-identical output |
 
+[[fig:match-flow]]
+
 ## The data structures
 
 ```rust

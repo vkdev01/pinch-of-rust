@@ -22,6 +22,8 @@ different approaches, each with a real product behind it.
 Compare that to an Electron app: a Chromium runtime plus Node, typically **80–150 MB**
 before your code. That gap is why the migration started.
 
+[[fig:bundle-size]]
+
 ## What the domain demands
 
 | Requirement | Consequence |

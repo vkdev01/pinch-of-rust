@@ -14,6 +14,8 @@ A `Vec` scan of 1,000 `u32`s beats a `HashMap` lookup: 4 KB is L1-resident and t
 branch predictor handles a linear scan perfectly. Asymptotics only win once n is
 big enough that the cache stops helping.
 
+[[fig:complexity]]
+
 ## Counting the real cost
 
 ```rust

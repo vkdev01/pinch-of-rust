@@ -28,6 +28,8 @@ api ──> adapters ──> app ──> domain
 - a compile unit that almost never changes, so it never recompiles
 - the ability to change the database without touching business rules
 
+[[fig:arch-layers]]
+
 ## Ports and adapters, concretely
 
 ```rust

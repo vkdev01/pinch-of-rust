@@ -26,6 +26,8 @@ costs you the trade.
 Add it up: **~1–5 µs end to end** for a well-engineered system, and most of that is
 network, not code. Which is exactly why the code must not add any of its own.
 
+[[fig:latency-budget]]
+
 ## What the domain demands
 
 | Requirement | Consequence |

@@ -79,6 +79,8 @@ let app = Router::new()
 > route now fails at startup with a clear error — if you are following a tutorial
 > that uses `:id`, it is for 0.7.
 
+[[fig:axum-request]]
+
 ## Extractors
 
 An extractor is anything implementing `FromRequestParts` (or `FromRequest` if it

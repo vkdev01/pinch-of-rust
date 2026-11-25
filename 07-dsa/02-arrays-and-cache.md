@@ -13,6 +13,8 @@ So a sequential scan of `Vec<u32>` costs ~1 miss per 16 elements. A pointer chas
 through a linked list costs a miss per element. That is a 16× difference before any
 algorithm is involved.
 
+[[fig:memory-latency]]
+
 ## Slice: the universal view
 
 ```rust
