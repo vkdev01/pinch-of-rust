@@ -3,3 +3,6 @@ node_modules/
 out/
 next-env.d.ts
 *.tsbuildinfo
+
+# generated at build time from the markdown in the repo root
+src/content/
