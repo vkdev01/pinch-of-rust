@@ -58,6 +58,7 @@ run `cargo sqlx prepare` to commit the `.sqlx/` offline cache.
 ## Layout
 
 ```text
+web/                     Next.js + Tailwind v4 + HeroUI v3 dashboard
 Cargo.toml               workspace
 crates/domain/           types and rules, no I/O — fast unit tests
 crates/api/              axum server
